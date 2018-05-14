@@ -1,0 +1,24 @@
+import React from 'react';
+import Card from './Card';
+
+
+const CardList = ({ robots }) => {
+	return (
+		<div className = 'tc'>
+			{
+				robots.map ((user, i) => {
+					return (
+						<Card
+						key = {i} 
+						name = {user.name} 
+						email = {user.email} 
+						id = {user.id} 
+						/>
+					);	
+				})
+			}
+		</div>
+	);
+}
+
+export default CardList;
